@@ -22,7 +22,7 @@ breweriesRouter.get(
 
     const cleanBreweries = await caseConverter.convert(breweries);
     const groupedBreweries = await byStatesAggregator.group(cleanBreweries);
-    res.send((Array.from(groupedBreweries.entries())));
+    res.send(Array.from(groupedBreweries.entries()));
   }
 );
 

@@ -32,7 +32,9 @@ describe("CaseConverter class", () => {
       expect(convertedBreweries[0].id).toBe(breweries[0].id);
       expect(convertedBreweries[0].address2).toBe(breweries[0].address_2);
       expect(convertedBreweries[0].address3).toBe(breweries[0].address_3);
-      expect(convertedBreweries[0].countyProvince).toBe(breweries[0].county_province);
+      expect(convertedBreweries[0].countyProvince).toBe(
+        breweries[0].county_province
+      );
       expect(convertedBreweries[0].postalCode).toBe(breweries[0].postal_code);
       expect(convertedBreweries[0].websiteUrl).toBe(breweries[0].website_url);
       expect(convertedBreweries[0].createdAt).toBe(breweries[0].created_at);
@@ -52,7 +54,7 @@ describe("CaseConverter class", () => {
           phone: "123456789",
         } as RawBrewery,
       ];
-      
+
       const cleanBreweries = await caseConverter.convert(breweries);
       expect(cleanBreweries.length).toBe(1);
       expect(cleanBreweries[0]).toStrictEqual(breweries[0]);
