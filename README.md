@@ -16,21 +16,21 @@ using:
 - eslint
 - prettier
 
-The endpoint processes data in a series of steps which can ve viewed in here
+The endpoint processes data in a series of steps which can be viewed in here
 https://excalidraw.com/#json=6157246362812416,y0_zaxZ_arRzSE4xq-IrGQ
 
 Each ETL step was separated into its own file inside /src/brewery/logic
 each file has its own test file
 
-the agregation of the steps is made inside /src/brewery/routes.ts
+the aggregation of the steps is made inside /src/brewery/routes.ts
 
-it is secured using basic authenticacion which is hardcoded for this demo project but it can be updated in the future.
+it is secured using basic authentication which is hardcoded for this demo project but it can be updated in the future.
 
 ### things that can be added in the future:
 
 The project is not production ready, depending on where we are planning to host it we can then create a CI/CD pipeline
 
-Improve autorization since it is now hardcoded into the index.ts file (user: admin, pass: admin)
+Improve authorization since it is now hardcoded into the index.ts file (user: admin, pass: admin)
 
 As the project grows we might need an IoC library, didn't use it on this project because it will take more time to build and it is not needed for the current size
 
